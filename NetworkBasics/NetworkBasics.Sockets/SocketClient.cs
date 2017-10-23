@@ -99,7 +99,7 @@ namespace NetworkBasics.Sockets
         {
             var state = (StateObject)ar.AsyncState;
             Socket socket = state.Socket;
-            
+
             SocketError errorCode;
             int read = socket.EndReceive(ar, out errorCode);
             if (errorCode != SocketError.Success)
@@ -113,7 +113,7 @@ namespace NetworkBasics.Sockets
                 state.Stream.Flush();
                 if (read == StateObject.BUFFER_SIZE)
                 {
-                    Thread.Sleep(1000);
+                    Thread.Sleep(100);
                     socket.BeginReceive(state.Buffer, 0, StateObject.BUFFER_SIZE, SocketFlags.None, new AsyncCallback(OnReceiveCallback), state);
                 }
                 else

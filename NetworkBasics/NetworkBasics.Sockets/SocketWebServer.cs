@@ -85,9 +85,9 @@ namespace NetworkBasics.Sockets
                 }
                 else
                 {
-                    contentType = System.Web.MimeMapping.GetMimeMapping(absolutePath);
                     if (File.Exists(absolutePath))
                     {
+                        contentType = System.Web.MimeMapping.GetMimeMapping(absolutePath);
                         response.Attributes.Add(HttpResponseHeaderOptions.StatusCode, "200 OK");
                         using (var memoryStream = new MemoryStream())
                         {

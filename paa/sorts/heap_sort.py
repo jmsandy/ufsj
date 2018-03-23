@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Algoritmo de ordenação HeapSort.
+"""Sort algorithm HeapSort.
 """
 
 from sorts.base_sort import BaseSort
@@ -14,7 +14,7 @@ __status__ = "Test"
 
 
 class HeapSort(BaseSort):
-    """Algoritmo de ordenação HeapSort."""
+    """Sort algorithm HeapSort."""
 
     def __init__(self):
         BaseSort.__init__(self, "HeapSort")

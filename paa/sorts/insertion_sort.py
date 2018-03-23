@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Algoritmo de ordenação InsertionSort.
+"""Sort algorithm InsertionSort.
 """
 
 from sorts.base_sort import BaseSort
@@ -15,7 +15,7 @@ __status__ = "Test"
 
 
 class InsertionSort(BaseSort):
-    """Algoritmo de ordenação InsertionSort."""
+    """Sort algorithm InsertionSort."""
 
     def __init__(self):
         BaseSort.__init__(self, "InsertionSort")

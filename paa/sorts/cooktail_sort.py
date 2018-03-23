@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Algoritmo de ordenação CocktailSort.
+"""Sort algorithm CocktailSort.
 """
 
 from sorts.base_sort import BaseSort
@@ -14,7 +14,7 @@ __email__ = "jmsandy@gmail.com"
 __status__ = "Test"
 
 class CocktailSort(BaseSort):
-    """Algoritmo de ordenação CocktailSort."""
+    """Sort algorithm CocktailSort."""
 
     def __init__(self):
         BaseSort.__init__(self, "CocktailSort")

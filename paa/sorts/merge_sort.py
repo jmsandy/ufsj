@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Algoritmo de ordenação MergeSort.
+"""Sort algorithm MergeSort.
 """
 
 from sorts.base_sort import BaseSort
@@ -15,7 +15,7 @@ __status__ = "Test"
 
 
 class MergeSort(BaseSort):
-    """Algoritmo de ordenação MergeSort."""
+    """Sort algorithm MergeSort."""
 
     def __init__(self):
         BaseSort.__init__(self, "MergeSort")

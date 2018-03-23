@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Algoritmo de ordenação ShellSort.
+"""Sort algorithm ShellSort.
 """
 
 from sorts.base_sort import BaseSort
@@ -15,7 +15,7 @@ __status__ = "Test"
 
 
 class ShellSort(BaseSort):
-    """Algoritmo de ordenação ShellSort."""
+    """Sort algorithm ShellSort."""
 
     def __init__(self):
         BaseSort.__init__(self, "ShellSort")

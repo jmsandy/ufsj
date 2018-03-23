@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Algoritmo de ordenação QuickSort.
+"""Sort algorithm QuickSort.
 """
 
 import random
@@ -16,7 +16,7 @@ __status__ = "Test"
 
 
 class QuickSort(BaseSort):
-    """Algoritmo de ordenação QuickSort."""
+    """Sort algorithm QuickSort."""
 
     def __init__(self):
         BaseSort.__init__(self, "QuickSort")

@@ -72,7 +72,11 @@ def main():
     instance.set_item(8, 7, 4)
     instance.set_item(8, 8, 8)
 
+    print "Before Solve"
+    instance.print_items()
     instance.solve()
+
+    print "After Solve"
     instance.print_items()
 
 

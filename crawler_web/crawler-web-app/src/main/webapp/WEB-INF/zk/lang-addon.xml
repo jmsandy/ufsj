@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<language-addon>
+
+    <addon-name>crawler-web-app</addon-name>
+    <language-name>xul/html</language-name>
+
+    <!-- When the version is changed, the browser will reload the JavaScript modules. -->
+    <javascript-module name="webcommon" version="1.4.0" />
+    <javascript-module name="limitingresources" version="1.4.0" />
+    
+</language-addon>

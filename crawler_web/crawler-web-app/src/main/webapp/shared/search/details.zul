@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:w="http://www.zkoss.org/2005/zk/client"
+    xmlns:n="http://www.zkoss.org/2005/zk/native"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+     
+    <window id="detailWindow" self="@define(content)">
+        <hlayout >
+            <image src="shared/img/logo-dcomp.png" style="height: 70px;" onClick="@command('onShowSearchWindow')" />
+            <vlayout hflex="1">
+                <div hflex="1" zclass="div-busca" style="margin-top: 0 !important; padding: 0 !important;">
+                    <textbox type="text" zclass="txt-busca" value="@bind(vm.queryToSearch)" placeholder="${c:l('label.placeholder.buscar')}"/>
+                    <button zclass="btn-busca" onClick="@command('onSearch')">${c:l('label.buscar')}</button>                
+                </div>            
+                <label value="@load(vm.response.sizeNewsMessage)" />
+            </vlayout>
+        </hlayout>        
+        
+        <div zclass="footer-about">
+            <n:footer>
+                <a onClick="@command('onOpenAbout')" zclass="a-about">${c:l('label.sobre')}</a>
+            </n:footer>
+        </div>
+                
+        <grid model="@load(vm.response.news)" mold="paging" pageSize="25">
+            <columns>                
+                <column width="max"></column>
+            </columns>
+            <template name="model">
+                <row align="left">
+                    <cell>
+                        <a href="@load(each.url)" target="_blank" label="@load(each.url)" />                        
+                        <label value="@load(each.shortDescription)" />
+                    </cell>
+                </row>				
+            </template>
+        </grid>
+    </window>   
+</zk>

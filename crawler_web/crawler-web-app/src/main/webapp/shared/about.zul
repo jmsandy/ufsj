@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window id="aboutWindow" self="@define(content)" title="${c:l('title.about')}"
+            closable="true" maximizable="true" visible="false" style="width: 500px;"
+            apply="org.zkoss.bind.BindComposer" mode="modal" popup="true"
+            viewModel="@id('vm') @init('br.edu.ufsj.crawler.webapp.viewmodels.AboutViewModel')">
+        <grid model="@load(vm.configurations)" mold="paging" pageSize="25">
+            <columns>
+                <column width="min"></column>
+                <column width="max"></column>
+            </columns>
+            <template name="model">
+                <row align="left">
+                    <label value="@load(each.configuration)" />
+                    <label value="@load(each.value)" />
+                </row>				
+            </template>
+        </grid>
+    </window>    
+</zk>

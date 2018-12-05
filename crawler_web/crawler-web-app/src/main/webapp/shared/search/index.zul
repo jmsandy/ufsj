@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:w="http://www.zkoss.org/2005/zk/client"
+    xmlns:n="http://www.zkoss.org/2005/zk/native"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+    
+    <window id="searchWindow" self="@define(content)">
+        <div zclass="logos">
+            <image src="shared/img/ufsj.jpg" zclass="logo" />
+            <image src="shared/img/logo-dcomp.png" style="height: 70px;" />
+        </div>
+
+        <image src="shared/img/server.svg" zclass="svg" />
+
+        <div zclass="div-busca">
+            <textbox type="text" zclass="txt-busca" value="@bind(vm.queryToSearch)" placeholder="${c:l('label.placeholder.buscar')}"/>
+            <button zclass="btn-busca" onClick="@command('onSearch')">${c:l('label.buscar')}</button>
+        </div>
+        
+        <div zclass="footer-about">
+            <n:footer>
+                <a onClick="@command('onOpenAbout')" zclass="a-about">${c:l('label.sobre')}</a>
+            </n:footer>
+        </div>    
+    </window>
+</zk>

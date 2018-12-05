@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+        Created by ZK Studio
+-->
+
+<zk>
+    <system-config>        
+        <label-location>/shared/i18n/message-labels.properties</label-location>
+        <ui-factory-class>org.zkoss.zk.ui.http.SerializableUiFactory</ui-factory-class>
+    </system-config>
+    <library-property>
+        <name>org.zkoss.bind.DebuggerFactory.enable</name>
+        <value>true</value>
+    </library-property>   
+    
+    <session-config>
+        <timeout-message>true</timeout-message>
+    </session-config>
+    
+<!--    <listener>
+        <listener-class>org.zkoss.zkmax.au.websocket.WebSocketWebAppInit</listener-class>
+    </listener>    -->
+</zk>
